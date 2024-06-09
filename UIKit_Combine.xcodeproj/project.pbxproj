@@ -13,6 +13,9 @@
 		6494FBC72C15F15F00D4A416 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6494FBC62C15F15F00D4A416 /* Base */; };
 		6494FBC92C15F16000D4A416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6494FBC82C15F16000D4A416 /* Assets.xcassets */; };
 		6494FBCC2C15F16000D4A416 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6494FBCB2C15F16000D4A416 /* Base */; };
+		6494FBD52C15F1DA00D4A416 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6494FBD42C15F1DA00D4A416 /* CombineCocoa */; };
+		6494FBD72C15F37900D4A416 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494FBD62C15F37900D4A416 /* ViewModel.swift */; };
+		6494FBD92C15F38000D4A416 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494FBD82C15F38000D4A416 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		6494FBC82C15F16000D4A416 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6494FBCB2C15F16000D4A416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6494FBCD2C15F16000D4A416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6494FBD62C15F37900D4A416 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		6494FBD82C15F38000D4A416 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6494FBD52C15F1DA00D4A416 /* CombineCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,41 @@
 		6494FBBE2C15F15F00D4A416 /* UIKit_Combine */ = {
 			isa = PBXGroup;
 			children = (
+				6494FBDC2C15FB5300D4A416 /* ViewModel */,
+				6494FBDB2C15FB4E00D4A416 /* Model */,
 				6494FBBF2C15F15F00D4A416 /* AppDelegate.swift */,
 				6494FBC12C15F15F00D4A416 /* SceneDelegate.swift */,
-				6494FBC32C15F15F00D4A416 /* ViewController.swift */,
+				6494FBDA2C15FB4700D4A416 /* View */,
 				6494FBC52C15F15F00D4A416 /* Main.storyboard */,
 				6494FBC82C15F16000D4A416 /* Assets.xcassets */,
 				6494FBCA2C15F16000D4A416 /* LaunchScreen.storyboard */,
 				6494FBCD2C15F16000D4A416 /* Info.plist */,
 			);
 			path = UIKit_Combine;
+			sourceTree = "<group>";
+		};
+		6494FBDA2C15FB4700D4A416 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6494FBC32C15F15F00D4A416 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6494FBDB2C15FB4E00D4A416 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6494FBD82C15F38000D4A416 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6494FBDC2C15FB5300D4A416 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6494FBD62C15F37900D4A416 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +115,9 @@
 			dependencies = (
 			);
 			name = UIKit_Combine;
+			packageProductDependencies = (
+				6494FBD42C15F1DA00D4A416 /* CombineCocoa */,
+			);
 			productName = UIKit_Combine;
 			productReference = 6494FBBC2C15F15F00D4A416 /* UIKit_Combine.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +146,9 @@
 				Base,
 			);
 			mainGroup = 6494FBB32C15F15F00D4A416;
+			packageReferences = (
+				6494FBD32C15F1DA00D4A416 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+			);
 			productRefGroup = 6494FBBD2C15F15F00D4A416 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6494FBD92C15F38000D4A416 /* Model.swift in Sources */,
 				6494FBC42C15F15F00D4A416 /* ViewController.swift in Sources */,
 				6494FBC02C15F15F00D4A416 /* AppDelegate.swift in Sources */,
+				6494FBD72C15F37900D4A416 /* ViewModel.swift in Sources */,
 				6494FBC22C15F15F00D4A416 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +403,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6494FBD32C15F1DA00D4A416 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6494FBD42C15F1DA00D4A416 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6494FBD32C15F1DA00D4A416 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6494FBB42C15F15F00D4A416 /* Project object */;
 }
