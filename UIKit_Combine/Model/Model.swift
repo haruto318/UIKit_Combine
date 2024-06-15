@@ -13,8 +13,4 @@ final class Model {
     func setValue(value: String){
         self.value = value
     }
-    
-    func getValue() -> String{
-        return self.value
-    }
 }

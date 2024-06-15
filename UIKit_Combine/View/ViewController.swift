@@ -71,6 +71,7 @@ class ViewController: UIViewController {
             .store(in: &subscriptions)
         
         viewModel.$inputText
+            .receive(on: DispatchQueue.main)  // UIの更新はメインスレッドで行う
             .sink { [weak self] value in
                 print("model value:", value)
                 self?.textField.text = value

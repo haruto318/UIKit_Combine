@@ -27,6 +27,6 @@ final class ViewModel {
     }
     
     func showValue() {
-        print(model.getValue())
+        print(model.value)
     }
 }
